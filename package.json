@@ -1,0 +1,22 @@
+{
+  "name": "rest-api-express-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmuth001/rest-api-express-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmuth001/rest-api-express-node/issues"
+  },
+  "homepage": "https://github.com/cmuth001/rest-api-express-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
