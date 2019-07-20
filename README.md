@@ -19,7 +19,7 @@ Implement the following endpoints:
 ## Outputs
 1. **GET /api/users**: List all user
 
-| ![All users](allUsers.png) |
+| ![All users](./public/allUsers.png) |
 |:---:|
 
 2. **POST /api/users**: Create new user
