@@ -24,8 +24,20 @@ Implement the following endpoints:
 
 2. **POST /api/users**: Create new user
 
+| ![Insert users](./public/insertUser.png) |
+|:---:|
+
 3. **GET /api/user/{id}**: Retrieve a single user
+
+| ![Get user](./public/getUser.png) |
+|:---:|
 
 4. **PUT /api/user/{id}**: Update single user
 
+| ![Update user](./public/updateUser.png) |
+|:---:|
+
 5. **DELETE /api/user/{id}**: Delete single user
+
+| ![Delete user](./public/deleteUser.png) |
+|:---:|
