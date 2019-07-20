@@ -19,6 +19,9 @@ Implement the following endpoints:
 ## Outputs
 1. **GET /api/users**: List all user
 
+| ![All users](allUsers.png) |
+|:---:|
+
 2. **POST /api/users**: Create new user
 
 3. **GET /api/user/{id}**: Retrieve a single user
