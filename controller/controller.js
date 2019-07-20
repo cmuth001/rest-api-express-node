@@ -81,3 +81,27 @@ exports.update = (req, res) => {
         
     });
 };
+
+exports.delete = (req, res) => {
+    var id = req.params.id;
+    User.findById(id, (err, user)=>{
+        if(err){
+            return res.json({
+                status: 'Error in finding user to delete',
+                message: err,
+            });
+        }
+        user.delete((err)=>{
+            if(err){
+                return res.json({
+                    status: 'Error in deleting user',
+                    message: err,
+                });
+            }
+            res.json({
+                status: 'Successfully deleted',
+                message: user
+            });
+        });
+    });
+};
