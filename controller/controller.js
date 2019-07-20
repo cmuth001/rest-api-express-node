@@ -1,14 +1,38 @@
-var  Model  =  require('../model/services.js');
-var modelObj = new Model();
-class Controller{
+var  User  =  require('../model/services.js');
 
-    get_users(){
-        var result = modelObj.get_users();
-        return(result);
-    }
-    get_user(id){
-        var result = modelObj.get_user(id);
-        return(result);
-    }
-}
-module.exports =  Controller;
+exports.index = (req, res) => {
+    User.get((err, users) => {
+        if(err){
+            res.json({
+                status: "Error occured in getting users",
+                message: err,
+            });
+        }
+        res.json({
+            status: "success!",
+            message: "users retrieved successfully",
+            data: users
+        });
+    });
+};
+
+exports.newUser = (req, res) => {
+    var user = new User();
+    console.log(req.body);
+    user.name = req.body.name ? req.body.name : user.name;
+    user.email = req.body.email ? req.body.email : user.email;
+
+    user.save((err) => {
+        if(err){
+            return res.json({
+                status: 'Error in inserting',
+                message: err,
+            });
+        }
+        res.json({
+            status: 'New User inserted successfully!',
+            message: user,
+        });
+    });
+};
+

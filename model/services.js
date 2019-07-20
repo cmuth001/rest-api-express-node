@@ -1,23 +1,22 @@
 
-var data = { 1: "Tony",
-             2: "Lisa",
-             3: "Michael",
-             4:"Ginger"
-            };
-            
-
-
-class Services{
-    get_mongo_connection(){
-
+var mongoose = require('mongoose');
+// Setup the schema
+var userSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    create_date: {
+        type: Date,
+        default: Date.now
     }
-    get_users(){
-        return(data);
-    }
-    get_user(id){
-        user = data[id];
-        return(user);
-    }
-
+});
+// Export User model
+var User = module.exports = mongoose.model('user', userSchema);
+module.exports.get = function (callback, limit) {
+    User.find(callback).limit(limit);
 }
-module.exports = Services;
