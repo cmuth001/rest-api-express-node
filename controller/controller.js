@@ -37,7 +37,7 @@ exports.newUser = (req, res) => {
 };
 
 exports.view = (req, res) => {
-    console.log(req.params.id);
+    // console.log(req.params.id);
     var id = req.params.id;
     
     User.findById(id, (err, user)=>{
@@ -54,3 +54,30 @@ exports.view = (req, res) => {
     });
 };
 
+exports.update = (req, res) => {
+    var id = req.params.id;
+    User.findById(id, (err, user) => {
+
+        if(err){
+            return res.json({
+                status: 'Error in finding user id',
+                message: err,
+            });
+        }
+        user.name = req.body.name?req.body.name:user.name;
+        user.email = req.body.email?req.body.email: user.email
+        user.save((err)=>{
+            if(err){
+                return res.json({
+                    status: 'Error in updating user details',
+                    message: userrer,
+                });
+            }
+            res.json({
+                status: 'User details successfully updated',
+                message: user,
+            });
+        });
+        
+    });
+};
