@@ -2,7 +2,7 @@
 
 An Application demonstrating simple REST API implementation with NodeJs, Express and MongoDb(Mongoose)
 
-Implemented a simple data model the stores user information with name adn email. 
+Implemented a simple API requests and Model to save/retrieve data from the database. 
 
 Implement the following endpoints:
   - GET /api/users list all user
