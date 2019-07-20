@@ -7,10 +7,11 @@ router.get('/', function(req, res){
     });
 });
 // users routes
-router.route('/users').get(controller.index);
-router.route('/users').post(controller.newUser);
-router.route('/user/:id').get(controller.view);
-router.route('/user/:id').put(controller.update);
-router.route('/user/:id').delete(controller.delete);
+router.route('/users').get(controller.index)
+                      .post(controller.newUser);
+                      
+router.route('/user/:id').get(controller.view)
+                         .put(controller.update)
+                         .delete(controller.delete);
 // Expose API routes to public
 module.exports = router;
