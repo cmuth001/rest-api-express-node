@@ -9,5 +9,6 @@ router.get('/', function(req, res){
 // users routes
 router.route('/users').get(controller.index);
 router.route('/users').post(controller.newUser);
+router.route('/user/:id').get(controller.view);
 // Expose API routes to public
 module.exports = router;

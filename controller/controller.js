@@ -36,3 +36,21 @@ exports.newUser = (req, res) => {
     });
 };
 
+exports.view = (req, res) => {
+    console.log(req.params.id);
+    var id = req.params.id;
+    
+    User.findById(id, (err, user)=>{
+        if(err){
+            return res.json({
+                status: "Error In fetching user",
+                message: err,
+            });
+        }
+        res.json({
+            status: 'User Found in the DB!',
+            message: user
+        });
+    });
+};
+
