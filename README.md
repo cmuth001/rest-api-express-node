@@ -1,6 +1,6 @@
 # A Simple REST API  tutorial
 
-An Application demonstrating simple REST API implementation with NodeJs, Express and MongoDb(Mongoose)
+A simple REST API application implementation with NodeJs, Express and MongoDb(Mongoose)
 
 Implemented a simple API requests and Model to save/retrieve data from the database. 
 
