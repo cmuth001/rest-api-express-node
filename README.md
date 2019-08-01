@@ -17,7 +17,7 @@ Implement the following endpoints:
  -  /users
  -  /user/{id}
  
- 1. Most of the developers make mistake by using verb instead of using noun. Generally developers forgot the we have HTTP (GET, POST, PUT, DELETE) method to describe the endpoint and endup using a verb instead of noun.
+ 1. Most of the developers make mistake by using verb instead of using noun. Generally developers forgot that we have HTTP (GET, POST, PUT, DELETE) method to describe the endpoint and endup using a verb instead of noun.
  
     Example: API to get all the users
  
