@@ -19,30 +19,34 @@ Implement the following endpoints:
  
  1. Most of the developers make mistake by using verb instead of using noun. Generally developers forgot the we have HTTP method to describe the endpoint and endup using a verb instead of noun.
  
- Example: API to get all the users
+    Example: API to get all the users
  
- **verb form:**  /getAllUsers 
+     **verb form:**  /getAllUsers 
 
- **noun form:**  /users
+     **noun form:**  /users
  
  2. Sometime API endpoint should give more information than just by  **/?id='123'**. Design endpoint for query parameters
     - /user?name="chandu", should not use /user?getUserByName="chandu"
     - /user?id=123, should not use /user?getUserById=123
     - /user/?type="abc", should not use /user?getUserByType="abc"
     
-  Avoid using verb forms in API endpints, and it will be more apt to use for function name in the backend.
+    Avoid using verb forms in API endpints, and it will be more apt to use for function name in the backend.
   
  3. Return endpoint as a Json format with status, code, ErrorMessage, body. 
     ```json
+    {
     status: "successfully retrieved",
     code: 200,
     data: [{},{},{}]
+    }
     ```
     
     ```json
+    {
     status: "Failed in retrieving",
     code: 404,
     error: "error message"
+    }
     ```
  4. If you are developing a production endpoint, it is always good to maintain ***versioning***.
     
