@@ -35,18 +35,18 @@ Implement the following endpoints:
  3. Return endpoint as a Json format with status, code, ErrorMessage, body. 
     ```json
     {
-    status: "successfully retrieved",
-    code: 200,
-    data: [{},{},{}]
+      status: "successfully retrieved",
+      code: 200,
+      data: [{},{},{}]
     }
     ```
     
     ```json
-    {
-    status: "Failed in retrieving",
-    code: 404,
-    error: "error message"
-    }
+      {
+      status: "Failed in retrieving",
+      code: 404,
+      error: "error message"
+      }
     ```
  4. If you are developing a production endpoint, it is always good to maintain ***versioning***.
     
