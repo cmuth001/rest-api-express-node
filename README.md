@@ -2,6 +2,8 @@
 
 A simple REST API application implementation with NodeJs, Express and MongoDb(Mongoose)
 
+Click [here](https://github.com/cmuth001/Secure-REST-API-Express-Node-MongoDB) for Secure REST API.
+
 Implemented a simple API requests and Model to save/retrieve data from the database. 
 
 Implement the following endpoints:
