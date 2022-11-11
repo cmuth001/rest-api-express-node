@@ -26,7 +26,7 @@ Implement the following endpoints:
      **noun form:**  /users
  
  2. Sometime API endpoint should give more information than just by  **/?id='123'**. Design endpoint for query parameters
-    - /user?name="chandu", should not use /user?getUserByName="chandu"
+    - /user?name="chandu", should not use /user?getUserByName="chandu" --- <test>
     - /user?id=123, should not use /user?getUserById=123
     - /user/?type="abc", should not use /user?getUserByType="abc"
     
